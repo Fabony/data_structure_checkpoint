@@ -25,8 +25,8 @@ Then do the vice versa to add elements from the second set.
 //Solution
 
 
-firstNumbers = [3,5,3,6,9]
-secondNumbers = [4,8,3,1,7,0,5]
+firstNumbers = [3,1,7, 9]
+secondNumbers = [2,4,1,9,3]
 let n = firstNumbers.length;
 
 
@@ -56,36 +56,36 @@ console.log(dataStructure(firstNumbers ,secondNumbers , n));
 
 
 
-secondNumbers = [4,8,3,1,7,0,5]
-firstNumbers = [3,5,3,6,9]
-let m = secondNumbers.length;
+// firstNumbers = [3,1,7, 9]
+// secondNumbers = [2,4,1,9,3]
+// let m = secondNumbers.length;
 
 
-function dataStructure ( secondNumbers, firstNumbers, m ){
-    sum = 0;
-    distinctElements = new Set();
+// function dataStructure ( secondNumbers, firstNumbers, m ){
+//     sum = 0;
+//     distinctElements = new Set();
 
 
-    for (i=0; i<n; i++){
-        distinctElements.add(secondNumbers[i])
-        sum += secondNumbers[i]
-    }
+//     for (i=0; i<n; i++){
+//         distinctElements.add(secondNumbers[i])
+//         sum += secondNumbers[i]
+//     }
 
-    for (i=0; i<n; i++){
-        if (distinctElements.has(firstNumbers[i])){
-            sum -= firstNumbers[i]
-        }
+//     for (i=0; i<n; i++){
+//         if (distinctElements.has(firstNumbers[i])){
+//             sum -= firstNumbers[i]
+//         }
 
-        else{
-            sum += firstNumbers[i]
-        }
-    }
-    return sum
-}
+//         else{
+//             sum += firstNumbers[i]
+//         }
+//     }
+//     return sum
+// }
 
 
 
-console.log(dataStructure(secondNumbers ,firstNumbers, n));
+// console.log(dataStructure(secondNumbers ,firstNumbers, m));
 
 
 // Problem 2 
@@ -97,57 +97,57 @@ console.log(dataStructure(secondNumbers ,firstNumbers, n));
 // Write an algorithm which determines, for n pairs of given vectors, whether two vectors of given IR are orthogonal, by calling the procedure defined in the previous question. The dot product of two orthogonal vectors is zero.
 // Modify the previous algorithm if you use a dot_product function instead of a procedure.
 
-PROCEDURE  dot_prouct( NUMBER: v1 , v2)
+// PROCEDURE  dot_prouct( NUMBER: v1 , v2)
 
-  VAR
-     n : size   
-    v1 : vector_one
-    v2 : vector_two
+//   VAR
+//      n : size   
+//     v1 : vector_one
+//     v2 : vector_two
     
-  BIGIN
+//   BIGIN
     
-  product = 0
-      // Loop for calculate dot product
-     for (let i = 0; i < n; ) Do
-      product += v1[] *v2[] ;
+//   product = 0
+//       // Loop for calculate dot product
+//      for (let i = 0; i < n; ) Do
+//       product += v1[] *v2[] ;
       
 
-  END
+//   END
 
-            //  2 SOLUTION
-            function dotProduct(vector1, vector2){
-                let result = 0;
-                for(let i = 0; i < vector1.length; i++){
-                    result += vector1[i] * vector2[i]
-                  }
-                // SINCE IS FUNCTION 
-                return result
-              }
-                  // FOR LOOP 
-              for(let i = 0; i < vectors.length; i++){
-                  // Nested  For loop
-                for(let j = i + 1; j < vectors.length; j++){
-                  if(dotProduct(vectors[i], vectors[j]) === 0){
-                      console.log(`${vectors[i]} and ${vectors[j]} are orthogonal `)
-                  }
-                }
-              }
+//             //  2 SOLUTION
+//             function dotProduct(vector1, vector2){
+//                 let result = 0;
+//                 for(let i = 0; i < vector1.length; i++){
+//                     result += vector1[i] * vector2[i]
+//                   }
+//                 // SINCE IS FUNCTION 
+//                 return result
+//               }
+//                   // FOR LOOP 
+//               for(let i = 0; i < vectors.length; i++){
+//                   // Nested  For loop
+//                 for(let j = i + 1; j < vectors.length; j++){
+//                   if(dotProduct(vectors[i], vectors[j]) === 0){
+//                       console.log(`${vectors[i]} and ${vectors[j]} are orthogonal `)
+//                   }
+//                 }
+//               }
 
 
-                  //3 SOLUTION
+//                   //3 SOLUTION
 
-                  function dot_Product(v1, v2)
+//                   function dot_Product(v1, v2)
 
-                  VAR
-                  n : size   
-                 v1 : vector_one
-                 v2 : vector_two
+//                   VAR
+//                   n : size   
+//                  v1 : vector_one
+//                  v2 : vector_two
                 
-                 BEGIN
+//                  BEGIN
                 
-                 product = 0
-                      // Loop for calculate dot product 
-                      for (let i = 0; i < n; i++)
+//                  product = 0
+//                       // Loop for calculate dot product 
+//                       for (let i = 0; i < n; i++)
 
-                          product = product[] + v1[] * v2[];
-                      return product;                 
+//                           product = product[] + v1[] * v2[];
+//                       return product;                 
